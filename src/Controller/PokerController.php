@@ -13,6 +13,8 @@ class PokerController extends AbstractController
         $request = Request::createFromGlobals();
 
 //        if($request->query->get('age')){
+
+
         if($request->query->has('age')){
             $age = $request->query->get('age');
 
@@ -25,7 +27,6 @@ class PokerController extends AbstractController
         } else {
             // Je ne pense pas que ce serait une bonne idée de faire flexible
             // pour le type $age comme celui-dessous...?
-
             $age = false;
             $message = 'remplissez le formulaire';
         }
