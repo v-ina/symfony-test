@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block metatitle %}{% endblock %}</title>
+
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+</head>
+<body>
+
+    <header>
+        <h2>HEADERHEADERHEADERHEADERHEADER</h2>
+        <nav>
+            <ul>
+                {# path() 쓰는 이유 : URL을 하드코딩하지 않고, 라우트 이름을 사용하여 URL을 생성하므로, 라우트 경로가 변경되더라도 템플릿을 수정할 필요가 없습니다. #}
+                <li><a href="{{ path('home') }}">home</a></li>
+                <li><a href="{{ path('pokemon_category_list') }}">category</a></li>
+                <li><a href="/articles">articles</a></li>
+                <li><a href="{{ path('poker') }}">Poker</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>TEST FOR BASE.HTML</h1>
+        {% block body %}
+        {% endblock %}
+
+    <footer>
+        <h2>FOOTERFOOTERFOOTERFOOTERFOOTER</h2>
+    </footer>
+
+</body>
+</html>
+
+{# 위에껀 base에 header, footer통합한 버전 #}
+{# 이전 버전 #}
+
+{#<header>#}
+{#    <h2>HEADERHEADERHEADERHEADERHEADER</h2>#}
+{#    <ul>#}
+{#        #}{# path() 쓰는 이유 : URL을 하드코딩하지 않고, 라우트 이름을 사용하여 URL을 생성하므로, 라우트 경로가 변경되더라도 템플릿을 수정할 필요가 없습니다. #}
+{#        <li><a href="{{ path('home') }}">home</a></li>#}
+{#        <li><a href="{{ path('pokemon_category_list') }}">category</a></li>#}
+{#        <li><a href="/articles">articles</a></li>#}
+{#    </ul>#}
+{#</header>#}
+
+
+{#<!DOCTYPE html>#}
+{#<html>#}
+{#    <head>#}
+{#        <meta charset="UTF-8">#}
+{#        <title>{% block title %}Welcome!{% endblock %}</title>#}
+{#        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">#}
+{#        {% block stylesheets %}#}
+{#        {% endblock %}#}
+
+{#        {% block javascripts %}#}
+{#            {% block importmap %}{{ importmap('app') }}{% endblock %}#}
+{#        {% endblock %}#}
+{#    </head>#}
+{#    <body>#}
+{#        <h1>TEST FOR BASE.HTML</h1>#}
+{#        {% block body %}{% endblock %}#}
+{#    </body>#}
+{#</html>#}

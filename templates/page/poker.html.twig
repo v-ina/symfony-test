@@ -1,0 +1,21 @@
+
+{% extends 'base.html.twig' %}
+
+{% block metatitle %}poker table{% endblock %}
+
+{% block body %}
+    <h1>test for get</h1>
+
+        {% if age %}
+            <p>{{ message }}</p>
+
+        {% else %}
+            <p>{{ message }}</p>
+            <form method="get">
+                <input type="number" name="age">
+                <input type="submit" value="valid">
+            </form>
+
+        {% endif %}
+
+{% endblock %}

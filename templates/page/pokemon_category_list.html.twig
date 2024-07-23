@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+
+{% block metatitle %} Pokemon Category {% endblock %}
+
+{% block body %}
+
+{#    {% include '/partial/header.html.twig' %}#}
+
+    {% for category in categories %}
+        <p>{{ category }}</p>
+    {% endfor %}
+
+{#    {% include '/partial/footer.html.twig' %}#}
+
+{% endblock %}
+
+{#<!doctype html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <meta name="viewport"#}
+{#          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">#}
+{#    <meta http-equiv="X-UA-Compatible" content="ie=edge">#}
+{#    <title>Document</title>#}
+{#</head>#}
+{#<body>#}
+{#    {% include 'partial/header.html.twig' %}#}
+
+{#    <h2>Pokemons category list</h2>#}
+{#        {% for category in categories %}#}
+{#            <p>{{ category }}</p>#}
+{#        {% endfor %}#}
+
+{#    {% include 'partial/footer.html.twig' %}#}
+{#</body>#}
+{#</html>#}

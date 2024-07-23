@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+{# 이 syntaxe 당연히 깜빡함;; #}
+{% block body %}
+
+{% include '/partial/header.html.twig' %}
+
+<div>
+    {% for pokemon in pokemons %}
+            {% if pokemon['isPublished'] == true %}
+                <p>{{ pokemon['title']|upper }}</p>
+            {% endif %}
+        {# 여기에서 배열안에 있는 것도 배열인거 생각못하고 ['title']이걸 깜빡함 #}
+    {% endfor %}
+</div>
+
+
+    {#{% include '../partial/footer.html.twig' %}#}
+    {% include 'partial/footer.html.twig' %}
+    {# 희안하게 위에껀 안되고, 아래껀 되네. #}
+{% endblock %}
