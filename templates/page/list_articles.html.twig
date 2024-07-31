@@ -4,14 +4,19 @@
 
 {% include '/partial/header.html.twig' %}
 
-<div>
+{#<div>#}
+{#    {% for pokemon in pokemons %}#}
+{#            {% if pokemon['isPublished'] == true %}#}
+{#                <p>{{ pokemon['title']|upper }}</p>#}
+{#            {% endif %}#}
+{#        #}{# 여기에서 배열안에 있는 것도 배열인거 생각못하고 ['title']이걸 깜빡함 #}
+{#    {% endfor %}#}
+{#</div>#}
+
     {% for pokemon in pokemons %}
-            {% if pokemon['isPublished'] == true %}
-                <p>{{ pokemon['title']|upper }}</p>
-            {% endif %}
-        {# 여기에서 배열안에 있는 것도 배열인거 생각못하고 ['title']이걸 깜빡함 #}
+        {#  href="{{ path('show_pokemon') }}?id={{ pokemon.id }}"      #}
+        <p><a href="/pokemon-detail?id={{ pokemon['id'] }}">{{ pokemon['title']|upper }}</a></p>
     {% endfor %}
-</div>
 
 
     {#{% include '../partial/footer.html.twig' %}#}

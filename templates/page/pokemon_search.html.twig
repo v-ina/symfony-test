@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block metatitle %} pokemon search {% endblock %}
+
+{% block body %}
+
+    <h1>RECHERCHE UN POKEMON</h1>
+    <section>
+        {% if pokemons %}
+            <div class="flex-wrap">
+            {% for pokemon in pokemons %}
+
+                    <div class="flex-center">
+                        <img src="{{ pokemon.image }}" alt="{{ pokemon.title }}">
+                        <p>id: {{ pokemon.id }}</p>
+                        <p>name: {{ pokemon.title }}</p>
+                        <p>description: {{ pokemon.description }}</p>
+                    </div>
+            {% endfor %}
+            </div>
+
+            {% else %}
+                <div class="flex-center">
+                    <form method="post">
+                        <label for="name">
+                            <input type="text" name="title">
+                            {# form결과 계속 null이던 이유: name을 name으로 둠 #}
+                            <input type="submit">
+                        </label>
+                    </form>
+                </div>
+        {% endif %}
+
+
+
+
+    </section>
+
+{% endblock %}

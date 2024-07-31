@@ -1,0 +1,30 @@
+
+{% extends 'base.html.twig' %}
+
+    {% block metatitle %}
+        {% if pokemon == null %}
+            unknown
+        {% else %}
+            {{ pokemon.title }}
+        {% endif %}
+    {% endblock %}
+
+{% block body %}
+
+    {% if pokemon == null %}
+        <p>you have not this pokemon yet</p>
+
+    {% else %}
+        <div class="flex-center">
+            <img src={{ pokemon.image}} alt="{{ pokemon.title }}">
+            <p>id: {{ pokemon.id }}</p>
+            <p>name: {{ pokemon.title }}</p>
+            <p>description: {{ pokemon.description }}</p>
+            <a href="{{ path('updtade_pokemon_form_builder', {id: pokemon.id}) }}">update pokemon</a>
+        </div>
+
+{#        <p>valide: {{ pokemon.isPublished }}</p>#}
+
+    {% endif %}
+
+{% endblock%}

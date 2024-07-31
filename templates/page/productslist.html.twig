@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block metatitle %} products list {% endblock %}
+
+{% block body %}
+
+    {% for product in products %}
+
+    <div>
+        <img src="{{ product.image}}" alt="{{ product.title }}">
+        <p>id: {{ product.id }}</p>
+        <p>
+            <a href="{{ path('product_detail', { 'productid': product.id }) }}">
+{#            <a href={{ path('product_detail') }}?productid={{ product.id }}> 위에처럼 써야함 #}
+                title: {{ product.title }}
+            </a>
+        </p>
+        <p>price: {{ product.price }}</p>
+        <p>price_reduction: {{ product.price_reduction }}</p>
+
+    </div>
+
+    {% endfor %}
+
+{% endblock %}

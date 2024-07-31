@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block metatitle %} pokemon search {% endblock %}
+
+{% block body %}
+
+    <section>
+
+        {% if pokemon %}
+            <div class="flex-wrap">
+                <div class="flex-center">
+                    <p>id: {{ pokemon.id }}</p>
+                    <p>name: {{ pokemon.title }}</p>
+                    <p>description: {{ pokemon.description }}</p>
+                    {#            <p>valide: {{ pokemon.isPublished }}</p>#}
+
+                </div>
+
+            </div>
+
+
+        {% endif %}
+
+    </section>
+
+{% endblock %}

@@ -10,26 +10,33 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>
-
     <header>
-        <h2>HEADERHEADERHEADERHEADERHEADER</h2>
         <nav>
             <ul>
+                <li><a href="/"><img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/pokemon-logo-design-template-eb355bb15c4344c1e0695a39ecadae50_screen.jpg?ts=1697729436" alt=""></a></li>
                 {# path() 쓰는 이유 : URL을 하드코딩하지 않고, 라우트 이름을 사용하여 URL을 생성하므로, 라우트 경로가 변경되더라도 템플릿을 수정할 필요가 없습니다. #}
-                <li><a href="{{ path('home') }}">home</a></li>
-                <li><a href="{{ path('pokemon_category_list') }}">category</a></li>
-                <li><a href="/articles">articles</a></li>
-                <li><a href="{{ path('poker') }}">Poker</a></li>
-            </ul>
+{#                <li><a href="{{ path('home') }}">home</a></li>#}
+{#                <li><a href="{{ path('pokemon_category_list') }}">category</a></li>#}
+{#                <li><a href="/articles">pokemons</a></li>#}
+{#                <li><a href="{{ path('poker') }}">Poker</a></li>#}
+{#                <li><a href="{{ path('products_list') }}">products</a></li>#}
+                <li><a href="{{ path('pokemon_search') }}">pokemon search from bdd</a></li>
+                <li><a href="{{ path('pokemon_list') }}">pokemon list from bdd</a></li>
+{#                <li><a href="{{ path('insert_pokemon') }}">add pokemon</a></li>#}
+                <li><a href="{{ path('insert_pokemon_form_builder') }}">add pokemon with formBuilder</a></li>
+                </ul>
         </nav>
     </header>
 
-    <h1>TEST FOR BASE.HTML</h1>
+    <main>
+        {#    <h1>TEST FOR BASE.HTML</h1>#}
         {% block body %}
         {% endblock %}
+    </main>
+
 
     <footer>
-        <h2>FOOTERFOOTERFOOTERFOOTERFOOTER</h2>
+        <p>YEONSOO &copy; 2024</p>
     </footer>
 
 </body>

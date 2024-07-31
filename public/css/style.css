@@ -4,8 +4,36 @@
     margin: 0px;
 }
 
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    opacity: 0.7;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+html{
+    height: 100%;
+}
 body{
     background-color: white;
+    font-family: sans-serif;
+    height: 100%;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    flex: 1;
+    width: 100%;
 }
 
 .header-nav {
@@ -24,4 +52,55 @@ body{
     list-style-type: none;
     padding: 5px;
     background-color: lightcoral;
+}
+
+nav  img{
+    width: 100px;
+    height: 100px;
+}
+
+nav > ul {
+    display: flex;
+    align-items: center;
+    padding: 0px 30px;
+    gap: 30px;
+
+}
+
+nav > ul > li:nth-child(2){
+    margin-left: auto;
+}
+
+.homepage__img{
+    width: 100%;
+
+}
+
+.homepage__img > img{
+    width: 100%;
+    object-fit: cover;
+}
+
+footer{
+    text-align: center;
+    padding: 10px 0px;
+}
+
+.flex-wrap{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.flex-center{
+    display: flex;
+    align-items: center; /* 선택적으로, 콘텐츠를 세로 중앙에 배치 */
+    /*justify-content: center;*/
+    flex-direction: column;
+    gap: 20px;
+    width: 300px;
+    text-align: center;
+    margin: 0 auto;
 }

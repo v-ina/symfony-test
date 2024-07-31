@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block metatitle %} products detail {% endblock %}
+
+{% block body %}
+
+{#  여기 if product !== null 로 쓰는거 아니고 is나 is not쓰는거임  #}
+    {% if product is not null %}
+        {{ product.title }}
+    {% else %}
+        <p>no pruduct found</p>
+    {% endif %}
+
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block metatitle %} add pokemon {% endblock %}
+
+{% block body %}
+
+    <h1>NEW POKEMON</h1>
+{#    <div class="flex-center">#}
+{#        <img src="{{ pokemon.image }}" alt="{{ pokemon.title }}">#}
+{#        <p>{{ pokemon.description }}</p>#}
+{#        <p>{{ pokemon.type }}</p>#}
+{#    </div>#}
+
+    <form method="post">
+        <div class="flex-center">
+            <input type="text" placeholder="title" name="title">
+            <input type="text" placeholder="description" name="description">
+            <input type="text" placeholder="image" name="image">
+            <input type="text" placeholder="type" name="type">
+            <input type="submit">
+        </div>
+
+    </form>
+
+{% endblock %}

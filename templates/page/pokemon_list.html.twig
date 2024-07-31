@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block metatitle %} all pokemon {% endblock %}
+
+
+{% block body %}
+    <h1>POKEMON LIST</h1>
+    <div class="flex-wrap">
+    {% for pokemon in pokemons %}
+
+            <div class="flex-center">
+                <a href="/pokemon-detail/{{ pokemon.id }}"><img src={{ pokemon.image}} alt={{ pokemon.title }}></a>
+                <p>{{ pokemon.title|upper }}</p>
+                <p>{{ pokemon.type }}</p>
+                <a href="{{ path('pokemon_delete', {id: pokemon.id}) }}">delete pokemon</a>
+                <a href="{{ path('updtade_pokemon_form_builder', {id: pokemon.id}) }}">update pokemon</a>
+            </div>
+
+    {% endfor %}
+
+    </div>
+
+{% endblock %}
